@@ -1,0 +1,84 @@
+plugins:
+  group:server:
+    server:pg66pr:
+      port: 5140
+      maxPort: 5149
+    ~server-satori:g77rzl: {}
+    ~server-temp:hbgyaj: {}
+  group:basic:
+    ~admin:nt3g60: {}
+    ~bind:lmfgb7: {}
+    commands:bmw1do:
+      hello:
+        name: command/hello
+    help:bewncr: {}
+    http:55ojna: {}
+    ~inspect:bep6rc: {}
+    locales:vn6yb1: {}
+    proxy-agent:sau7ym: {}
+    rate-limit:k9tdxq: {}
+    telemetry:h80e44: {}
+  group:console:
+    actions:f7nemc: {}
+    analytics:8yygwp: {}
+    android:hpjt5t:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    ~auth:nmsrmb: {}
+    config:tso6rc: {}
+    console:q17kar:
+      open: true
+    dataview:b4udjy: {}
+    desktop:7ocjwa:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:pjd70u: {}
+    logger:1h78vf: {}
+    insight:wajozy: {}
+    market:kf45u5:
+      search:
+        endpoint: https://registry.koishi.chat/index.json
+    notifier:0pieku: {}
+    oobe:hdcv38: {}
+    sandbox:crc3ni: {}
+    status:23snfh: {}
+    theme-vanilla:4ykwq9: {}
+  group:storage:
+    ~database-mongo:d1a794:
+      database: koishi
+    ~database-mysql:a05c2z:
+      database: koishi
+    ~database-postgres:et68fz:
+      database: koishi
+    database-sqlite:4ug8t5:
+      path: data/koishi.db
+    assets-local:7bs2vg: {}
+  group:adapter:
+    ~adapter-dingtalk:pcbghk: {}
+    ~adapter-discord:n6w2t9: {}
+    ~adapter-kook:bj5u3u: {}
+    ~adapter-lark:k7kt7s: {}
+    ~adapter-line:cldl7u: {}
+    ~adapter-mail:n9apla: {}
+    ~adapter-matrix:phq2ir: {}
+    adapter-qq:mlsl30:
+      id: '102664531'
+      secret: knqtw048CGKOTYdinsx28EKQWcipw3AH
+      token: vzu2JTtl0cqS5XkUZkZENRkt4g4KCiCQ
+      type: public
+      sandbox: true
+      intents:
+        - USER_MESSAGE
+        - MESSAGE_AUDIT
+    ~adapter-satori:yos9yn: {}
+    ~adapter-slack:ci722q: {}
+    ~adapter-telegram:c5fv7o: {}
+    ~adapter-wechat-official:2ohenl: {}
+    ~adapter-wecom:69obrc: {}
+    ~adapter-whatsapp:q18upc: {}
+    ~adapter-zulip:8qdf27: {}
+  group:develop:
+    $if: env.NODE_ENV === 'development'
+    hmr:y4i185:
+      root: .
+    qwqb233-firsttest:t922ty: {}
+    qwqb233-getdeepseek:448bpa: {}
+    qwqb233-fortune:s8gnis: {}
